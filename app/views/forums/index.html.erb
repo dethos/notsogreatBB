@@ -1,0 +1,32 @@
+<h1>Listing forums</h1>
+
+<div class="pull-right"><p><%= link_to 'New Forum', new_forum_path,  class: "btn btn-default" %></p></div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Discussions</th>
+      <% if current_user %>
+      <th colspan="2"></th>
+      <% end -%>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @forums.each do |forum| %>
+      <tr>
+        <td><%= link_to forum.title, forum %></td>
+        <td><%= forum.description %></td>
+        <td><%= forum.topics.count %></td>
+        <% if current_user %>
+        <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
+        <td><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end -%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
