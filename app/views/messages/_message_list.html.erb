@@ -7,7 +7,7 @@
       <div class="panel-heading">Anonymous</div>
   <% end %>
     <div class="panel-body">
-      <%= message.content %>
+      <%= raw message.content %>
     </div>
     <div class="panel-footer">
       Posted <%= time_ago_in_words message.created_at %> ago

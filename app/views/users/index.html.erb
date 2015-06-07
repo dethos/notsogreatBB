@@ -1,0 +1,21 @@
+Filter:
+<form method="GET" action="">
+  <div class="form-group">
+    <input type="text" name="q" class="form-control" value="<%= params[:q] %>">
+  </div>
+</form>
+
+<table class="table table-bordered table-striped" >
+  <thead>
+    <th>Email</th>
+    <th>joined</th>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.created_at %></td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
