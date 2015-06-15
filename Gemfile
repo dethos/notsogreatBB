@@ -29,6 +29,7 @@ gem "therubyracer"
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem "capybara"
+  gem 'factory_girl_rails'
   gem 'selenium-webdriver'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

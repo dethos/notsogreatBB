@@ -18,7 +18,7 @@
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav" id="menu">
       <% if current_user %>
         <li><a>You are already logged in</a><li>
         <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
