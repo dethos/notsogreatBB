@@ -7,7 +7,7 @@ Use it only for testing purposes.
 
 This project is vulnerable to:
 
-1. Refelected XSS Attacks
+1. Reflected XSS Attacks
 2. Stored XSS Attacks
 3. CSRF Attacks
 4. SQL Injection Attacks

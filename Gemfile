@@ -32,6 +32,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'database_cleaner', '~> 1.4.1'
+  gem 'owasp_zap'
 end
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

@@ -36,4 +36,13 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  Capybara.register_driver :selenium do |app|
+    profile = Selenium::WebDriver::Firefox::Profile.new
+    proxy = Selenium::WebDriver::Proxy.new({
+      type: :manual,
+      http: "localhost:8080",
+    })
+    profile.proxy = proxy
+    Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
+  end
 end

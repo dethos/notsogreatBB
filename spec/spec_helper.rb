@@ -17,6 +17,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'capybara/rspec'
+require 'owasp_zap'
+
+include OwaspZap
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -86,4 +89,19 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  z = Zap.new :target=>'http://localhost:34952', :zap=>"zap/zap.sh"
+  config.before(:suite) do
+    z.start :daemon=>true
+    sleep(5.0)
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.after(:suite) do
+    z.ascan.start
+    while z.ascan.running?
+      sleep(5.0)
+    end
+    puts z.xml_report
+    z.shutdown
+  end
 end
