@@ -12,3 +12,13 @@ This project is vulnerable to:
 3. CSRF Attacks
 4. SQL Injection Attacks
 
+# How to run
+
+> git clone git@github.com:dethos/notsogreatBB.git
+
+> bundle install
+
+> Dowload zap and add it to zap/ folder
+
+> bundle exec rspec
+
