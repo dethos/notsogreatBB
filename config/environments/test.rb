@@ -45,4 +45,5 @@ Rails.application.configure do
     profile.proxy = proxy
     Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
   end
+  Capybara.server_port = 30000
 end

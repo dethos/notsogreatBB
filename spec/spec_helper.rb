@@ -89,7 +89,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  z = Zap.new :target=>'http://localhost:34952', :zap=>"zap/zap.sh"
+  z = Zap.new :target=>'http://localhost:30000', :zap=>"zap/zap.sh"
   config.before(:suite) do
     z.start :daemon=>true
     sleep(5.0)
