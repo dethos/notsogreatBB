@@ -93,7 +93,7 @@ RSpec.configure do |config|
   z = Zap.new :target=>'http://127.0.0.1:30000', :zap=>"zap/zap.sh"
   config.before(:suite) do
     z.start :daemon=>true
-    sleep(5.0)
+    sleep(7.0)
     DatabaseCleaner.clean_with(:truncation)
   end
 

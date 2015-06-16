@@ -14,17 +14,17 @@ This project is vulnerable to:
 
 # How to run
 
-1. Clone the repo
+Clone the repo
 
 > git clone git@github.com:dethos/notsogreatBB.git
 
-2. Install dependencies
+Install dependencies
 
 > bundle install
 
-3. Dowload zap and add it to zap/ folder
+Dowload zap and add it to zap/ folder
 
-4. Run Tests and see zap in action
+Run Tests and see zap in action
 
 > bundle exec rspec
 

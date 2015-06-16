@@ -12,9 +12,9 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="<%= root_path %>">NotsoGreatBB</a>
     </div>
-    <form class="navbar-form navbar-left" role="search" method="GET" action="<%= search_index_path %>">
+    <form class="navbar-form navbar-left" role="search" method="GET" action="<%= search_index_path %>" id="search-form">
       <div class="form-group">
-        <input type="text" class="form-control" name="q" placeholder="Search">
+        <input type="text" class="form-control" name="q" placeholder="Search" id="search-input">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
@@ -52,7 +52,7 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
       <div class="navbar-header">
-        <span class="navbar-brand"> Do not use this in production, do not be a dumbass. Intensionally flawed software.</span>
+        <span class="navbar-brand">Intensionally flawed software, do not use this in production,</span>
       </div>
   </div>
 </nav>
