@@ -31,4 +31,4 @@ Run Tests and see zap in action
 
 # Current issues detected with this setup
 
-Can be checke in the [wiki](https://github.com/dethos/notsogreatBB/wiki/Results-with-the-current-setup)
+Can be checked in the [wiki](https://github.com/dethos/notsogreatBB/wiki/Results-with-the-current-setup)
